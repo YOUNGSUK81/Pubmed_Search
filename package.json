@@ -1,0 +1,35 @@
+{
+  "name": "@modelcontextprotocol/server-pubmed-search",
+  "version": "1.0.0",
+  "description": "MCP server for PubMed medical research search with Impact Factor analysis",
+  "license": "MIT",
+  "author": "Your Name",
+  "type": "module",
+  "bin": {
+    "mcp-server-pubmed-search": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.0.1",
+    "fast-xml-parser": "^4.3.2",
+    "node-fetch": "^3.3.2",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/node-fetch": "^2.6.11",
+    "shx": "^0.3.4",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
